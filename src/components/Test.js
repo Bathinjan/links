@@ -1,50 +1,34 @@
-// import {
-//   OrbitControls,
-//   ArcballControls,
-//   PerspectiveCamera,
-//   OrthographicCamera,
-// } from "@react-three/drei";
+// Component for testing some hooks functionality
+import { useState, useEffect } from "react";
 
-// import { useFrame, useThree } from "@react-three/fiber";
-// import { TextureLoader } from "three/src/loaders/TextureLoader";
+export default function Test() {
+  function getRandomNumber(max) {
+    return Math.floor(Math.random() * (max + 1));
+  }
+  const [nX, setNX] = useState(window.innerWidth / 2);
+  const [nY, setNY] = useState(window.innerHeight / 2);
 
-// import Planet from "./Planet";
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      console.log(`x value: ${nX}`);
+      setNX(() => {
+        return getRandomNumber(window.innerWidth);
+      });
+    }, 20000);
 
-// export default function Test() {
-//   // Create new texture loader
-//   //   const loader = new TextureLoader();
-//   //   const { scene } = useThree();
-//   //   const texture = loader.load("../images/space2.jpg");
-//   //   scene.background = texture;
+    return () => {};
+  }, [nX, window.innerWidth, window.innerHeight]);
 
-//   return (
-//     <>
-//       {/* <Planet /> */}
-//       <OrthographicCamera position={[0, 0, -10]} />
-//       <mesh position={[0, -3, 0]}>
-//         {" "}
-//         <boxGeometry />
-//         <meshStandardMaterial />
-//       </mesh>
-//       {/* Lights */}
-//       <ambientLight args={["white", 1]} />
-//     </>
-//   );
-// }
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      console.log(`y value: ${nY}`);
+      setNY(() => {
+        return getRandomNumber(window.innerHeight);
+      });
+    }, 20000);
 
-{
-  /* <mesh position={[0, 0, 10]} rotation={[0, 0, 0]}>
-<boxGeometry args={[2, 2, 2]} />
-<meshStandardMaterial
-  color={"yellow"}
-  roughness={1}
-  metalness={0.5}
-  flatShading={false}
-  // wireframe={false}
-  emissive={"skyblue"}
-  emissiveIntensity={8}
-  toneMapped={false}
-  emissiveMap={color}
-/>
-</mesh> */
+    return () => {};
+  }, [nY, window.innerWidth, window.innerHeight]);
+
+  return <div className="a" style={{ left: `${nX}px`, top: `${nY}px)` }}></div>;
 }

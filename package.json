@@ -4,21 +4,17 @@
   "homepage": "https://bathinjan.github.io/links",
   "private": true,
   "dependencies": {
-    "@react-three/drei": "^9.80.5",
-    "@react-three/fiber": "^8.13.7",
-    "@react-three/postprocessing": "^2.15.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "react-three-fiber": "^6.0.13",
-    "three": "^0.155.0",
+    "styled-components": "^6.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
