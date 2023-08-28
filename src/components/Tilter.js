@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 // -------------- STYLED COMPONENT --------------- //
 //? For greater control over box sizing
-const boxSize = 150;
+const boxSize = 125;
 const BoxFront = styled.div`
   transform: translateZ(-${boxSize}px);
 `;

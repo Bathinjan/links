@@ -45,7 +45,6 @@ html {
   width: 100%;
   height: 100vh;
   background-color: black;
-  border: 1px solid transparent;
 }
 
 /* --------------------------- NAVBAR --------------------------- */
@@ -55,7 +54,9 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 10px;
 }
 
 .logo {
@@ -118,7 +119,7 @@ nav {
   width: 500px;
   box-shadow:
   inset 0 0 1em hsla(0, 0%, 100%, 0.8),
-  0 0 .8em hwb(51 0% 0% / 0.8),
+  0 0 .8em hwb(51 1% 0% / 0.8),
   0 0 .5em  hsla(0, 0%, 100%, 0.8);
   border-radius: 15px;
   height: 0px;
@@ -136,7 +137,7 @@ nav {
 .footer {
   position: absolute;
   color: white;
-  bottom: 40px;
+  bottom: 20px;
   left: 50%;
   height: 60px;
   width: 300px;
@@ -355,25 +356,26 @@ nav {
 
 .tilter--background--image {
   height: 100%;
+  width: 100%;
 }
 
 .tilter--box--area {
   position: absolute;
-  top: 8em;
+  top: 5em;
   bottom: .5em;
   left: .5em;
   right: .5em;
   margin: auto;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   transform-style: preserve-3d;
 }
 
 .tilter--box {
   color: white;
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 10%;
   perspective: 400px;
   opacity: 0.6;
