@@ -3,7 +3,7 @@ A webpage to replace my old, boring LinkTree page that links out to my other soc
 
 Now you can click on CUBES!!
 
-Visit the website here:  bathinjan.github.io/links/ 
+[Click me to visit the page](https://Bathinjan.github.io/links)
 
 ## !! NOTE: MOBILE USERS
 This site hasn't been configured for mobile use yet! Next update will tackle this issue - some design changes need to be made in the meantime.
