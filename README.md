@@ -1,7 +1,10 @@
 # Social Media Links
 A webpage to replace my old, boring LinkTree page that links out to my other social media sites.
 
-Now you can click on CUBES!
+Now you can click on CUBES!!
+
+[Click here to visit the website](https://Bathinjan.github.io/links)
+
 
 ## !! NOTE: MOBILE USERS
 This site hasn't been configured for mobile use yet! Next update will tackle this issue - some design changes need to be made in the meantime.
