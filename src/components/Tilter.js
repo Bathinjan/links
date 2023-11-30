@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 import styled from "styled-components";
 
 // -------------- STYLED COMPONENT --------------- //
 //? For greater control over box sizing
 const boxSize = 125;
+const boxSizeSmall = 80;
 const BoxFront = styled.div`
   transform: translateZ(-${boxSize}px);
 `;
@@ -48,7 +49,7 @@ export default function Tilter(props) {
   //* Effect hooks:
 
   // Update x,y of mouse when mouse moves
-  useEffect(() => {
+  useLayoutEffect(() => {
     const updateMousePosition = (event) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
     };
@@ -61,7 +62,7 @@ export default function Tilter(props) {
   }, [mousePosition.x, mousePosition.y]);
 
   // Update the offset values when the mouse moves
-  useEffect(() => {
+  useLayoutEffect(() => {
     const updateOffset = (event) => {
       setOffset({
         x: ((event.clientX - middleScreen.x) / middleScreen.x) * 38, // Normalizing values; clamping degree max
@@ -77,7 +78,7 @@ export default function Tilter(props) {
   }, [middleScreen.x, middleScreen.y]);
 
   // Update the middle of screen values on resize
-  useEffect(() => {
+  useLayoutEffect(() => {
     const updateMiddleScreen = (event) => {
       setMiddleScreen({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
     };

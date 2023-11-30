@@ -16,6 +16,14 @@ import artstation from "./images/artstation.png";
 import github from "./images/github-w.png";
 import background from "./images/background.png";
 
+// TODO
+
+//! Rescalable "Tilter" component on screen resize?
+//* provide state / hook: screen size -> returns approp. sized Tilter cube
+
+//! Provide touch-screen friendly hooks / effects
+//* ensure 'tilter' can still be used on mobile
+
 export default function App() {
   return (
     <div className="parent">
